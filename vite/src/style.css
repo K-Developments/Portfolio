@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@config 'E:\vitee\vite\tailwind.config.js';
+
+body{
+  @apply bg-[#0d0d0d]
+  text-[#666666]
+}
+
+i{
+  @apply hover:text-[#ddfd02] duration-300
+}
+
+@layer utilities{
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0d0d0d; 
+    border-radius: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .border-gradient {
+    border-image: linear-gradient(to top, #ffffff, #000000);
+    border-image-slice: 2;
+  }
+
+  .swiper {
+    @apply w-full h-auto;
+  }
+  
+  .swiper-slide {
+
+    background: transparent;
+    
+   
+  }
+
+  
+  .back{
+    @apply rotate-360
+  }
+
+  .black{
+    @apply text-black
+  }
+  
+}
+
