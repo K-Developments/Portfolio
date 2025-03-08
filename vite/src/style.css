@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @config 'E:\vitee\vite\tailwind.config.js';
 
+
+
+html{
+  box-sizing:border-box;
+}
 body{
   @apply bg-[#0d0d0d]
   text-[#666666]
@@ -36,6 +41,12 @@ i{
     border-image: linear-gradient(to top, #ffffff, #000000);
     border-image-slice: 2;
   }
+
+  .border-glow {
+    border-image: linear-gradient(to top, #ddfd02, #000000);
+    border-image-slice: 2;
+  }
+
 
   .swiper {
     @apply w-full h-auto;

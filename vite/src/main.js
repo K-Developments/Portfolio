@@ -1,40 +1,11 @@
 import './style.css';
-import Swiper from 'swiper'; // Import Swiper
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules'; // Import Swiper modules
+
+import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import { Grid, Autoplay } from 'swiper/modules';
 
-
-const btn = document.getElementById('btn');
-const navLinks = document.querySelectorAll(".nav-link");
-const nav = document.getElementById('nav-menu');
-let btns = document.querySelectorAll('#btn2');
-let divisions = document.querySelectorAll('#division');
-const icons = document.querySelectorAll('#icons');
-
-
-btns.forEach((btns, index) => {
-  btns.addEventListener("click", () => {
-    btns.classList.toggle('back');
-    divisions[index]?.classList.toggle("pb-[200px]"); 
-  });
-});
-
-
-btn.addEventListener("click", () => {
-  nav.classList.toggle("scale-100");
-});
-
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.add("scale-0");
-    nav.classList.remove("scale-100");
-    nav.classList.add("duration-300");
-    
-    
-  });
-});
-document.addEventListener('DOMContentLoaded', () => {
 const swiper = new Swiper('.swiper', {
+  modules: [Grid, Autoplay], 
   loop: false,
   autoplay: {
     delay: 2000,
@@ -43,8 +14,7 @@ const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
   grabCursor: true,
-  initialSlide: 0,  
-  
+  initialSlide: 0,
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -69,6 +39,39 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+
+
+
+
+const btn = document.getElementById('btn');
+const navLinks = document.querySelectorAll(".nav-link");
+const nav = document.getElementById('nav-menu');
+let btns = document.querySelectorAll('#btn2');
+let divisions = document.querySelectorAll('#division');
+const icons = document.querySelectorAll('#icons');
+
+
+btns.forEach((btns, index) => {
+  btns.addEventListener("click", () => {
+    btns.classList.toggle('back');
+    divisions[index]?.classList.toggle("pb-[200px]"); 
+  });
+});
+
+
+btn.addEventListener("click", () => {
+  nav.classList.toggle("scale-[100%]");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.add("scale-0");
+    nav.classList.remove("scale-100");
+    nav.classList.add("duration-300");
+    
+    
+  });
 });
 
 
